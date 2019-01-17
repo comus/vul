@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "alias": ["vul.now.sh"],
+  "builds": [
+    { "src": "next.config.js", "use": "now-next", "config": { "maxLambdaSize": "40mb" } },
+    { "src": "src/api/routes/*.js", "use": "now-node" }
+  ],
+  "routes": [
+    { "src": "/api", "dest": "src/api/routes/index.js" },
+    { "src": "/api/(.*)", "dest": "src/api/routes/$1.js" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
