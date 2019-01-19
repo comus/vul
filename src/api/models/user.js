@@ -1,6 +1,15 @@
 import db from './db'
 import nanoid from 'nanoid'
 
+export const getUserById = async (userId) => {
+  const rootRef = db.ref()
+  const usersRef = rootRef.child('users')
+  const userRef = usersRef.child(userId)
+  const snapshot = await userRef.once('value')
+  const value = snapshot.val()
+  return value
+}
+
 export const getUserByUID = async (uid) => {
   const rootRef = db.ref()
   const usersRef = rootRef.child('users')
