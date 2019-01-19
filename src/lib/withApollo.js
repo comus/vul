@@ -2,8 +2,8 @@ import withApollo from 'next-with-apollo'
 import ApolloClient, { InMemoryCache } from 'apollo-boost'
 import { API_URL } from './constants'
 
-export default withApollo(({ ctx, headers, initialState }) => (
-  new ApolloClient({
+export default withApollo(({ ctx = {}, headers, initialState }) => {
+  return new ApolloClient({
     uri: API_URL,
     cache: new InMemoryCache().restore(initialState || {}),
     request: operation => {
@@ -18,4 +18,4 @@ export default withApollo(({ ctx, headers, initialState }) => (
       })
     }
   })
-))
+})
