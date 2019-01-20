@@ -1,6 +1,6 @@
 {
   "name": "@vul/api",
-  "version": "0.0.1-canary.0",
+  "version": "0.0.1-canary.3",
   "files": [
     "lib"
   ],
@@ -9,7 +9,7 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "@vul/core": "^0.0.1-canary.2",
+    "@vul/core": "^0.0.1-canary.3",
     "apollo-server-micro": "^2.3.1",
     "body-parser": "^1.18.3",
     "cookie-session": "^2.0.0-beta.3",
