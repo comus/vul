@@ -1,49 +1,19 @@
 {
-  "name": "vul",
-  "version": "1.0.0",
-  "license": "MIT",
+  "name": "vul-project",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon packages/server/index.js --exec babel-node --config-file ./packages/.babelrc",
-    "build": "yarn build:next && yarn build:server",
-    "now-build": "yarn build",
-    "build:next": "next build",
-    "build:server": "cross-env NODE_ENV=production babel packages --out-dir dist --config-file ./packages/.babelrc",
-    "start": "cross-env NODE_ENV=production node dist/server/index.js"
-  },
-  "dependencies": {
-    "apollo-boost": "^0.1.25",
-    "apollo-server-micro": "^2.3.1",
-    "body-parser": "^1.18.3",
-    "cookie-session": "^2.0.0-beta.3",
-    "express": "^4.16.4",
-    "firebase": "^5.7.3",
-    "graphql": "^14.1.1",
-    "graphql-date": "^1.0.3",
-    "graphql-tag": "^2.10.1",
-    "hoist-non-react-statics": "^3.2.1",
-    "keygrip": "^1.0.3",
-    "lodash": "^4.17.11",
-    "nanoid": "^2.0.1",
-    "next": "canary",
-    "next-with-apollo": "^3.3.2",
-    "now-firebase-admin-database": "^6.5.0",
-    "react": "^16.7.0",
-    "react-apollo": "^2.3.3",
-    "react-dom": "^16.7.0",
-    "react-firebaseui": "^3.1.2",
-    "request": "^2.88.0"
+    "lerna": "lerna",
+    "bootstrap": "lerna bootstrap",
+    "publish-stable": "lerna version",
+    "publish-canary": "lerna version prerelease --preid canary",
+    "lint": "standard"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-plugin-module-resolver": "^3.1.2",
-    "cross-env": "^5.2.0",
-    "nodemon": "^1.18.9",
+    "lerna": "^3.10.6",
     "standard": "^12.0.1"
   },
   "standard": {
