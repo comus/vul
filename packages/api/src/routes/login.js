@@ -1,6 +1,6 @@
 import express from 'express'
 import * as bodyParser from 'body-parser'
-import firebase from 'lib/firebase'
+import firebase from '@vul/core/lib/firebase'
 import { getUserByUID, createUser } from '../models/user'
 import session from '../utils/session'
 
