@@ -1,6 +1,6 @@
 import express from 'express'
 import next from 'next'
-import api from 'api'
+import api from '@vul/api/lib'
 import middlewares from './middlewares'
 
 const port = parseInt(process.env.PORT, 10) || 3000

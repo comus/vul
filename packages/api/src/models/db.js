@@ -1,4 +1,4 @@
-import firebase from 'lib/firebase'
+import firebase from '@vul/core/lib/firebase'
 
 const db = firebase.database()
 
