@@ -1,6 +1,6 @@
 import { Component } from 'react'
-import firebase, { initFirebase } from 'lib/firebase'
-import { API_URL } from 'lib/constants'
+import firebase, { initFirebase } from '@vul/core/lib/firebase'
+import { API_URL } from '@vul/core/lib/constants'
 
 class Logout extends Component {
   componentDidMount () {

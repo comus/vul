@@ -1,5 +1,5 @@
 const express = require('express')
-const middlewares = require('./dist/server/middlewares').default
+const middlewares = require('@vul/server/lib/middlewares').default
 
 module.exports = {
   launcher ({ port, handle }) {

@@ -1,4 +1,4 @@
-import { withCurrentUser } from 'lib/withCurrentUser'
+import { withCurrentUser } from '@vul/core/lib/withCurrentUser'
 
 const Index = (props) => {
   return (

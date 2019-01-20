@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
-import firebase, { initFirebase } from 'lib/firebase'
-import { API_URL } from 'lib/constants'
+import firebase, { initFirebase } from '@vul/core/lib/firebase'
+import { API_URL } from '@vul/core/lib/constants'
 
 const getUIConfig = () => ({
   signInFlow: 'popup',
