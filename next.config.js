@@ -6,8 +6,8 @@ module.exports = {
     if (!isServer) {
       config.resolve.mainFiles = ['index.browser', 'index']
     }
-    config.resolve.modules = [path.resolve(__dirname, 'src'), 'node_modules']
-    config.resolve.alias['src'] = path.join(__dirname, 'src')
+    config.resolve.modules = [path.resolve(__dirname, 'packages'), 'node_modules']
+    config.resolve.alias['packages'] = path.join(__dirname, 'packages')
     return config
   }
 }
